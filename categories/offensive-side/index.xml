@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Offensive Side on KALLEPALLI RAVI TEJA</title>
+    <link>http://kallepalliraviteja.github.io/categories/offensive-side/</link>
+    <description>Recent content in Offensive Side on KALLEPALLI RAVI TEJA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://kallepalliraviteja.github.io/categories/offensive-side/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mindmap for SQL Injection.</title>
+      <link>http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/</guid>
+      <description>What is the Objective of this post?  Hello in this brief post i want to give a debrief of sql injection and how can a penetration tester check for sql injection vulneratbilities.</description>
+    </item>
+    
+  </channel>
+</rss>

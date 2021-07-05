@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on KALLEPALLI RAVI TEJA</title>
+    <link>http://kallepalliraviteja.github.io/categories/</link>
+    <description>Recent content in Categories on KALLEPALLI RAVI TEJA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://kallepalliraviteja.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Offensive Side</title>
+      <link>http://kallepalliraviteja.github.io/categories/offensive-side/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://kallepalliraviteja.github.io/categories/offensive-side/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pentesting</title>
+      <link>http://kallepalliraviteja.github.io/categories/pentesting/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://kallepalliraviteja.github.io/categories/pentesting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Learning</title>
+      <link>http://kallepalliraviteja.github.io/categories/learning/</link>
+      <pubDate>Thu, 13 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://kallepalliraviteja.github.io/categories/learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Soho Theme on KALLEPALLI RAVI TEJA</title>
+    <link>http://kallepalliraviteja.github.io/</link>
+    <description>Recent content in Soho Theme on KALLEPALLI RAVI TEJA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://kallepalliraviteja.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mindmap for SQL Injection.</title>
+      <link>http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/</guid>
+      <description>What is the Objective of this post?  Hello in this brief post i want to give a debrief of sql injection and how can a penetration tester check for sql injection vulneratbilities.</description>
+    </item>
+    
+    <item>
+      <title>Books to read</title>
+      <link>http://kallepalliraviteja.github.io/post/2021-05-23-to-read-books/</link>
+      <pubDate>Thu, 13 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://kallepalliraviteja.github.io/post/2021-05-23-to-read-books/</guid>
+      <description>Goal for books. This books to be read in this year.</description>
+    </item>
+    
+    <item>
+      <title>Hacking Blue Machine</title>
+      <link>http://kallepalliraviteja.github.io/post/2021-05-24-blue-htb/</link>
+      <pubDate>Thu, 13 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://kallepalliraviteja.github.io/post/2021-05-24-blue-htb/</guid>
+      <description>&lt;p&gt;In this post i will walk you through the process in which i have rooted BLUE Machine on Hack The Box.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hacking Jerry Machine</title>
+      <link>http://kallepalliraviteja.github.io/post/2021-05-25-jerry-htb/</link>
+      <pubDate>Thu, 13 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://kallepalliraviteja.github.io/post/2021-05-25-jerry-htb/</guid>
+      <description>In this post i will walk you through the process in which i have rooted Jerry Machine on Hack The Box.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://kallepalliraviteja.github.io/contact/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://kallepalliraviteja.github.io/contact/</guid>
+      <description>Get in contact with us!</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://kallepalliraviteja.github.io/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://kallepalliraviteja.github.io/about/</guid>
+      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.</description>
+    </item>
+    
+  </channel>
+</rss>

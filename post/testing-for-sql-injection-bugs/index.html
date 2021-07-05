@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.84.4" />
+
+  <title>Mindmap for SQL Injection. &middot; KALLEPALLI RAVI TEJA</title>
+
+  <meta name="description" content="Hacking the Hack The Box Blue Machine." />
+
+  
+
+<meta itemprop="name" content="Mindmap for SQL Injection.">
+<meta itemprop="description" content="Hacking the Hack The Box Blue Machine."><meta itemprop="datePublished" content="2021-07-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="541"><meta itemprop="image" content="http://kallepalliraviteja.github.io/images/profile.jpg"/>
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://kallepalliraviteja.github.io/images/profile.jpg"/>
+
+<meta name="twitter:title" content="Mindmap for SQL Injection."/>
+<meta name="twitter:description" content="Hacking the Hack The Box Blue Machine."/>
+
+
+<meta property="og:title" content="Mindmap for SQL Injection." />
+<meta property="og:description" content="Hacking the Hack The Box Blue Machine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/" /><meta property="og:image" content="http://kallepalliraviteja.github.io/images/profile.jpg"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-07-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-07-05T00:00:00+00:00" /><meta property="og:site_name" content="KALLEPALLI RAVI TEJA" />
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":"Person",
+      "@id": "http://kallepalliraviteja.github.io#author",
+      "name":  null ,
+      "image": {
+        "@type":"ImageObject",
+        
+        "url": "http://kallepalliraviteja.github.io/images/profile.jpg"
+        
+      },
+      "description": ""
+    },
+    {
+      "@type": "WebSite",
+      "@id": "http://kallepalliraviteja.github.io#website",
+      "url": "http://kallepalliraviteja.github.io",
+      "name": "KALLEPALLI RAVI TEJA",
+      "description": "",
+      "publisher": {
+        "@id": "http://kallepalliraviteja.github.io#author"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "http://kallepalliraviteja.github.io/images/profile.jpg",
+      "caption": "KALLEPALLI RAVI TEJA"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/#webpage",
+      "url": "http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/",
+      "name": "Mindmap for SQL Injection.",
+      "isPartOf": {
+        "@id": "http://kallepalliraviteja.github.io#website"
+      },
+      "about": {
+         "@id": "http://kallepalliraviteja.github.io#author"
+      },
+      "datePublished": "2021-07-05T00:00:00+00:00",
+      "dateModified": "2021-07-05T00:00:00+00:00",
+      "description": "Hacking the Hack The Box Blue Machine.",
+      "inLanguage": "en",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "isPartOf": {
+        "@id": "http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/#webpage"
+      },
+      "headline": "Mindmap for SQL Injection.",
+      "datePublished": "2021-07-05T00:00:00+00:00",
+      "dateModified": "2021-07-05T00:00:00+00:00",
+      "publisher": {
+        "@id": "http://kallepalliraviteja.github.io#author"
+      },
+      "keywords": [
+      ],
+      "articleSection": [
+        "Pentesting"
+      ],
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "name": "Kallepalli Ravi Teja"
+      },
+      "potentialAction": [
+        {
+          "@type": "CommentAction",
+          "name": "Comment",
+          "target": [
+            "http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/#comments"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <a href="http://kallepalliraviteja.github.io">
+            <img src="/images/profile.jpg" class="img-circle img-headshot center" alt="Profile Picture">
+          </a>
+        </div>
+        
+      
+      
+      <h3>KALLEPALLI RAVI TEJA</h3>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="/about/">About</a>
+        </li>
+
+        <li>
+          <a href="http://kallepalliraviteja.github.io">Blog</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://www.linkedin.com/in/kraviteja87/" rel="me" title="Linkedin" target="_blank">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/kallepalliraviteja" rel="me" title="GitHub" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/raviteja_in" rel="me" title="Twitter" target="_blank">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1 class="title">Mindmap for SQL Injection.</h1>
+  
+
+  <div class="post-date">
+    <time datetime="2021-07-05T00:00:00Z">Jul 5, 2021</time> <span class="readtime">&middot; 3 min read</span>
+  </div>
+
+  <div>
+  <blockquote>
+<h3 id="what-is-the-objective-of-this-post">What is the <em><strong>Objective</strong></em> of this post?</h3>
+</blockquote>
+<h3 id="hello-in-this-brief-post-i-want-to-give-a-debrief-of-sql-injection-and-how-can-a-penetration-tester-check-for-sql-injection-vulneratbilities">Hello in this brief post i want to give a debrief of sql injection and how can a penetration tester check for sql injection vulneratbilities.</h3>
+<blockquote>
+<h3 id="what-is-sql-injection">What is <em><strong>SQL Injection</strong></em>?</h3>
+</blockquote>
+<h3 id="sql-injection-is-a-process-in-which-attackertester-can-manipulate-the-way-in-which-sql-query-gets-interpreted-or-processed-by-the-underlying-application-by-doing-so-the-attacker-can-get-access-to-data-to-which-he-is-not-authorized-to-vieweditinsertdelete">SQL injection is a process in which attacker/tester can manipulate, the way in which SQL query gets interpreted or processed by the underlying application. By doing so the attacker can get access to data to which he is not authorized to view/edit/insert/delete.</h3>
+<blockquote>
+<h3 id="how-to-check-for-sql-injection-vulnerabilities">How to <em><strong>check</strong></em> for SQL injection vulnerabilities?</h3>
+</blockquote>
+<h3 id="sql-injection-can-be-found-by-doing-systamatic-testing-on-application-entry-points-as-shown-below">SQL Injection can be found by doing systamatic testing on application entry points as shown below.</h3>
+<blockquote>
+<p><em><strong>STEP 1</strong></em></p>
+</blockquote>
+<h4 id="by-inserting-quote-on-the-application-entry-point-ie-a-input-parameter-and-checking-how-the-system-responds-to-the-input-we-can-find-whether-the-system-is-vulnerable-to-sql-injection-or-not">By inserting quote on the application entry point (ie., a input parameter) and checking how the system responds to the input we can find whether the system is vulnerable to sql injection or not.</h4>
+<ul>
+<li>
+<h4 id="if-there-is-a-visible-difference-like">If there is a visible difference like,</h4>
+<ul>
+<li>
+<h4 id="1-the-system-may-throw-an-error">1 The system may throw an error.</h4>
+</li>
+<li>
+<h4 id="2-there-might-be-a-rendering-change-in-the-output-where-the-vulnerable-variable-is-reflected">2 There might be a rendering change in the output, where the vulnerable variable is reflected</h4>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="if-there-is-no-visible-change-as-said-previosuly">If there is no visible change as said previosuly.</h4>
+<ul>
+<li>
+<h4 id="1-try-to-inject-an-error-in-to-the-application-like-divided-by-zero-and-see-how-it-is-handled-by-the-system">1. Try to inject an error in to the application like divided by zero and see how it is handled by the system</h4>
+</li>
+<li>
+<h4 id="2-try-to-use-sleep-statement-and-find-if-there-is-a-delay-in-the-response-of-the-system">2. Try to use sleep statement and find if there is a delay in the response of the system.</h4>
+</li>
+<li>
+<h4 id="note-the-above-two-techniques-need-the-knowledge-of-the-type-of-database-as-we-are-unable-to-know-whether-the-system-is-vulnerable-or-not-there-is-no-chance-of-knowing-the-type-of-database-so-we-can-do-trail-and-error-only">Note: The above two techniques need the knowledge of the type of database. As we are unable to know whether the system is vulnerable or not there is no chance of knowing the type of database. So, we can do trail and error only.</h4>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><em><strong>STEP 2</strong></em></p>
+</blockquote>
+<ul>
+<li>
+<h4 id="once-the-system-is-found-out-to-be-vulnerable-we-should-deploy-different-techniques-to-find-the-type-of-database-employed-this-can-be-done-as-shown-below">Once the system is found out to be vulnerable we should deploy different techniques to find the type of database employed. This can be done as shown below</h4>
+<ul>
+<li>
+<h4 id="if-the-injection-is-taking-place-and-there-is-visible-change-in-the-output-then-we-can-use-union-technique">If the injection is taking place and there is visible change in the output then we can use union technique</h4>
+</li>
+</ul>
+<blockquote>
+<p><em><strong>UNION TECHNIQUE</strong></em></p>
+</blockquote>
+<ul>
+<li>This technique can be used to display different columns of a table by concatinating them with regular output.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#f92672">#</span> The following code helps <span style="color:#66d9ef">in</span> determing the <span style="color:#66d9ef">type</span> <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">database</span>
+Eg:
+    <span style="color:#f92672">#</span> <span style="color:#66d9ef">If</span> it <span style="color:#66d9ef">is</span> a mysql <span style="color:#66d9ef">database</span> <span style="color:#66d9ef">and</span> the application logic <span style="color:#66d9ef">is</span> returning different products <span style="color:#66d9ef">using</span> the below <span style="color:#66d9ef">statement</span> 
+    <span style="color:#f92672">#</span> <span style="color:#66d9ef">For</span> <span style="color:#f92672">***</span>Oracle<span style="color:#f92672">***</span>
+    <span style="color:#66d9ef">select</span> productname,price <span style="color:#66d9ef">from</span> products <span style="color:#66d9ef">where</span> producttype<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Mobiles&#39;</span> <span style="color:#66d9ef">union</span> <span style="color:#66d9ef">SELECT</span> banner,<span style="color:#66d9ef">null</span> <span style="color:#66d9ef">FROM</span> v$version
+    <span style="color:#f92672">#</span> <span style="color:#66d9ef">For</span> <span style="color:#f92672">***</span>MYSQL<span style="color:#f92672">/</span>MSSQL<span style="color:#f92672">***</span>
+    <span style="color:#66d9ef">select</span> productname,price <span style="color:#66d9ef">from</span> products <span style="color:#66d9ef">where</span> producttype<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Mobiles&#39;</span> <span style="color:#66d9ef">union</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">@@</span><span style="color:#66d9ef">version</span>,<span style="color:#66d9ef">null</span>
+    <span style="color:#f92672">#</span> <span style="color:#66d9ef">For</span> <span style="color:#f92672">***</span>PostgreSQL<span style="color:#f92672">***</span>
+    <span style="color:#66d9ef">select</span> productname,price <span style="color:#66d9ef">from</span> products <span style="color:#66d9ef">where</span> producttype<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Mobiles&#39;</span> <span style="color:#66d9ef">union</span>  	<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">version</span>(),<span style="color:#66d9ef">null</span>            
+</code></pre></div><ul>
+<li>Simillary user can check different tables avaialable in the schema along with their columns name by unioning them with the regualar output.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="if-we-found-that-the-system-is-vulnerable-but-we-cannot-visible-see-the-difference-like-slow-response-or-any-application-errors-then-we-should-check-for-out-of-band-application-security-testing-or-oast-is-short">If we found that the system is vulnerable but we cannot visible see the difference like slow response or any application errors. Then we should check for Out of band Application Security Testing or OAST is short</h4>
+<blockquote>
+<p>Outofband Application Security Testing</p>
+</blockquote>
+<ul>
+<li>By using tools like burp collabrator we can make database server to perform a dns lookup to external domain where the burp collabarator replies with the ip and also intimates us about the name lookup.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><em><strong>Places</strong></em> where SQL Injection takes place</p>
+</blockquote>
+<ul>
+<li>
+<h4 id="inside-update-statements-within-the-updated-values-or-in-the-where-clause">Inside UPDATE statements, within the updated values or in the WHERE clause.</h4>
+</li>
+<li>
+<h4 id="inside-insert-statements-within-the-inserted-values">Inside INSERT statements, within the inserted values.</h4>
+</li>
+<li>
+<h4 id="in-select-statements-within-the-table-or-column-name">In SELECT statements, within the table or column name.</h4>
+</li>
+<li>
+<h4 id="in-select-statements-within-the-order-by-clause">In SELECT statements, within the ORDER BY clause.</h4>
+</li>
+</ul>
+
+  </div>
+
+  
+
+
+  <div class="share-buttons">
+  <a class="twitter-share-button"
+     href="#"
+     title="Share on Twitter"
+     data-url="http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/"
+     data-text="Mindmap for SQL Injection."><i class="fab fa-twitter"></i></a>
+
+  <a class="linkedin-share-button"
+     href="#"
+     title="Share on LinkedIn"
+     data-url="http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/"
+     data-text="Mindmap for SQL Injection."><i class="fab fa-linkedin-in"></i></a>
+
+  <a class="facebook-share-button"
+     href="#"
+     title="Share on Facebook"
+     data-url="http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/"
+     data-text="Mindmap for SQL Injection."><i class="fab fa-facebook"></i></a>
+
+  <a class="telegram-share-button"
+     href="#"
+     title="Share on Telegram"
+     data-url="http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/"
+     data-text="Mindmap for SQL Injection."><i class="fab fa-telegram"></i></a>
+
+  <a class="pinterest-share-button"
+     href="#"
+     title="Share on Pinterest"
+     data-url="http://kallepalliraviteja.github.io/post/testing-for-sql-injection-bugs/"
+     data-text="Mindmap for SQL Injection."><i class="fab fa-pinterest"></i></a>
+</div>
+
+
+  
+</div>
+  </main>
+
+  <footer>
+  <div>
+    <p>
+      &copy; KALLEPALLI RAVI TEJA 2021
+
+      &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>
+
+      &middot; Build with <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://themes.gohugo.io/soho/" target="_blank">Soho</a> theme
+    </p>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/soho.js"></script>
+
+  
+
+  
+</body>
+</html>
