@@ -14,7 +14,7 @@
 <meta itemprop="name" content="Mindmap for SQL Injection.">
 <meta itemprop="description" content="Hacking the Hack The Box Blue Machine."><meta itemprop="datePublished" content="2021-07-05T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-07-05T00:00:00+00:00" />
-<meta itemprop="wordCount" content="541"><meta itemprop="image" content="http://kallepalliraviteja.github.io/images/profile.jpg"/>
+<meta itemprop="wordCount" content="539"><meta itemprop="image" content="http://kallepalliraviteja.github.io/images/profile.jpg"/>
 <meta itemprop="keywords" content="" />
 
 <meta name="twitter:card" content="summary_large_image"/>
@@ -224,45 +224,41 @@
 
   <div>
   <blockquote>
-<h3 id="what-is-the-objective-of-this-post">What is the <em><strong>Objective</strong></em> of this post?</h3>
+<h4 id="what-is-the-objective-of-this-post">What is the <em><strong>Objective</strong></em> of this post?</h4>
 </blockquote>
-<h3 id="hello-in-this-brief-post-i-want-to-give-a-debrief-of-sql-injection-and-how-can-a-penetration-tester-check-for-sql-injection-vulneratbilities">Hello in this brief post i want to give a debrief of sql injection and how can a penetration tester check for sql injection vulneratbilities.</h3>
+<p>Hello in this brief post i want to give a debrief of sql injection and how can a penetration tester check for sql injection vulneratbilities.</p>
 <blockquote>
-<h3 id="what-is-sql-injection">What is <em><strong>SQL Injection</strong></em>?</h3>
+<h4 id="what-is-sql-injection">What is <em><strong>SQL Injection</strong></em>?</h4>
 </blockquote>
-<h3 id="sql-injection-is-a-process-in-which-attackertester-can-manipulate-the-way-in-which-sql-query-gets-interpreted-or-processed-by-the-underlying-application-by-doing-so-the-attacker-can-get-access-to-data-to-which-he-is-not-authorized-to-vieweditinsertdelete">SQL injection is a process in which attacker/tester can manipulate, the way in which SQL query gets interpreted or processed by the underlying application. By doing so the attacker can get access to data to which he is not authorized to view/edit/insert/delete.</h3>
+<p>SQL injection is a process in which attacker/tester can manipulate, the way in which SQL query gets interpreted or processed by the underlying application. By doing so the attacker can get access to data to which he is not authorized to view/edit/insert/delete.</p>
 <blockquote>
-<h3 id="how-to-check-for-sql-injection-vulnerabilities">How to <em><strong>check</strong></em> for SQL injection vulnerabilities?</h3>
+<h4 id="how-to-check-for-sql-injection-vulnerabilities">How to <em><strong>check</strong></em> for SQL injection vulnerabilities?</h4>
 </blockquote>
-<h3 id="sql-injection-can-be-found-by-doing-systamatic-testing-on-application-entry-points-as-shown-below">SQL Injection can be found by doing systamatic testing on application entry points as shown below.</h3>
+<p>SQL Injection can be found by doing systamatic testing on application entry points as shown below.</p>
 <blockquote>
-<p><em><strong>STEP 1</strong></em></p>
+<p><em><strong>STEP 1</strong></em><br>
+By inserting quote on the application entry point (ie., a input parameter) and checking how the system responds to the input we can find whether the system is vulnerable to sql injection or not.</p>
 </blockquote>
-<h4 id="by-inserting-quote-on-the-application-entry-point-ie-a-input-parameter-and-checking-how-the-system-responds-to-the-input-we-can-find-whether-the-system-is-vulnerable-to-sql-injection-or-not">By inserting quote on the application entry point (ie., a input parameter) and checking how the system responds to the input we can find whether the system is vulnerable to sql injection or not.</h4>
 <ul>
-<li>
-<h4 id="if-there-is-a-visible-difference-like">If there is a visible difference like,</h4>
+<li>If there is a visible difference like,
 <ul>
-<li>
-<h4 id="1-the-system-may-throw-an-error">1 The system may throw an error.</h4>
-</li>
-<li>
-<h4 id="2-there-might-be-a-rendering-change-in-the-output-where-the-vulnerable-variable-is-reflected">2 There might be a rendering change in the output, where the vulnerable variable is reflected</h4>
-</li>
+<li>1 The system may throw an error.</li>
+<li>2 There might be a rendering change in the output, where the vulnerable variable is reflected</li>
 </ul>
 </li>
-<li>
-<h4 id="if-there-is-no-visible-change-as-said-previosuly">If there is no visible change as said previosuly.</h4>
+<li>If there is no visible change as said previosuly.
 <ul>
 <li>
-<h4 id="1-try-to-inject-an-error-in-to-the-application-like-divided-by-zero-and-see-how-it-is-handled-by-the-system">1. Try to inject an error in to the application like divided by zero and see how it is handled by the system</h4>
+<ol>
+<li>Try to inject an error in to the application like divided by zero and see how it is handled by the system</li>
+</ol>
 </li>
 <li>
-<h4 id="2-try-to-use-sleep-statement-and-find-if-there-is-a-delay-in-the-response-of-the-system">2. Try to use sleep statement and find if there is a delay in the response of the system.</h4>
+<ol start="2">
+<li>Try to use sleep statement and find if there is a delay in the response of the system.</li>
+</ol>
 </li>
-<li>
-<h4 id="note-the-above-two-techniques-need-the-knowledge-of-the-type-of-database-as-we-are-unable-to-know-whether-the-system-is-vulnerable-or-not-there-is-no-chance-of-knowing-the-type-of-database-so-we-can-do-trail-and-error-only">Note: The above two techniques need the knowledge of the type of database. As we are unable to know whether the system is vulnerable or not there is no chance of knowing the type of database. So, we can do trail and error only.</h4>
-</li>
+<li>Note: The above two techniques need the knowledge of the type of database. As we are unable to know whether the system is vulnerable or not there is no chance of knowing the type of database. So, we can do trail and error only.</li>
 </ul>
 </li>
 </ul>
@@ -270,12 +266,9 @@
 <p><em><strong>STEP 2</strong></em></p>
 </blockquote>
 <ul>
-<li>
-<h4 id="once-the-system-is-found-out-to-be-vulnerable-we-should-deploy-different-techniques-to-find-the-type-of-database-employed-this-can-be-done-as-shown-below">Once the system is found out to be vulnerable we should deploy different techniques to find the type of database employed. This can be done as shown below</h4>
+<li>Once the system is found out to be vulnerable we should deploy different techniques to find the type of database employed. This can be done as shown below
 <ul>
-<li>
-<h4 id="if-the-injection-is-taking-place-and-there-is-visible-change-in-the-output-then-we-can-use-union-technique">If the injection is taking place and there is visible change in the output then we can use union technique</h4>
-</li>
+<li>If the injection is taking place and there is visible change in the output then we can use union technique</li>
 </ul>
 <blockquote>
 <p><em><strong>UNION TECHNIQUE</strong></em></p>
@@ -297,8 +290,7 @@ Eg:
 </li>
 </ul>
 </li>
-<li>
-<h4 id="if-we-found-that-the-system-is-vulnerable-but-we-cannot-visible-see-the-difference-like-slow-response-or-any-application-errors-then-we-should-check-for-out-of-band-application-security-testing-or-oast-is-short">If we found that the system is vulnerable but we cannot visible see the difference like slow response or any application errors. Then we should check for Out of band Application Security Testing or OAST is short</h4>
+<li>If we found that the system is vulnerable but we cannot visible see the difference like slow response or any application errors. Then we should check for Out of band Application Security Testing or OAST is short
 <blockquote>
 <p>Outofband Application Security Testing</p>
 </blockquote>
@@ -311,18 +303,10 @@ Eg:
 <p><em><strong>Places</strong></em> where SQL Injection takes place</p>
 </blockquote>
 <ul>
-<li>
-<h4 id="inside-update-statements-within-the-updated-values-or-in-the-where-clause">Inside UPDATE statements, within the updated values or in the WHERE clause.</h4>
-</li>
-<li>
-<h4 id="inside-insert-statements-within-the-inserted-values">Inside INSERT statements, within the inserted values.</h4>
-</li>
-<li>
-<h4 id="in-select-statements-within-the-table-or-column-name">In SELECT statements, within the table or column name.</h4>
-</li>
-<li>
-<h4 id="in-select-statements-within-the-order-by-clause">In SELECT statements, within the ORDER BY clause.</h4>
-</li>
+<li>Inside UPDATE statements, within the updated values or in the WHERE clause.</li>
+<li>Inside INSERT statements, within the inserted values.</li>
+<li>In SELECT statements, within the table or column name.</li>
+<li>In SELECT statements, within the ORDER BY clause.</li>
 </ul>
 
   </div>
